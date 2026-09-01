@@ -106,6 +106,29 @@ nav {
     transform: translateY(-1px);
 }
 
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: var(--white);
+    font-size: 1.25rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.mobile-nav-toggle:hover,
+.mobile-nav-toggle:focus-visible {
+    color: var(--safety-orange);
+    border-color: var(--safety-orange);
+    outline: none;
+    background: rgba(249, 115, 22, 0.1);
+}
+
 .btn-login {
     border: 2px solid var(--safety-orange);
     color: var(--safety-orange) !important;
@@ -314,12 +337,197 @@ footer {
     .download-container {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
+    }
+    .download-content {
+        max-width: 650px;
+        margin: 0 auto;
     }
     .app-badges {
         justify-content: center;
     }
     .phone-mockup img {
         transform: rotate(0deg);
-        max-height: 400px;
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+
+    /* Mobile Header & Nav */
+    .mobile-nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .nav-links a:active {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .btn-cta-nav {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 24px;
+        text-align: center;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 130px 0 70px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        letter-spacing: 1px;
+        line-height: 1.25;
+        margin-bottom: 18px;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+        padding: 0 10px;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 28px;
+    }
+
+    /* Features & Solutions */
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .feature-card {
+        padding: 32px 24px;
+    }
+
+    /* Download */
+    .download-section {
+        padding: 70px 0;
+    }
+
+    .download-content h2 {
+        font-size: 2rem;
+    }
+
+    .download-content p {
+        font-size: 1.05rem;
+    }
+
+    .phone-mockup img {
+        max-height: 360px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 45px 0;
+    }
+
+    .footer-links {
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 18px;
+    }
+
+    header {
+        padding: 16px 0;
+    }
+
+    .logo {
+        height: 34px;
+    }
+
+    .hero {
+        padding: 115px 0 55px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.65rem;
+    }
+
+    .download-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .app-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .badge-placeholder {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+    }
+
+    .phone-mockup img {
+        max-height: 300px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 14px;
     }
 }
