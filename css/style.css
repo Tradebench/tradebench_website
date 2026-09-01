@@ -18,6 +18,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Hanken Grotesk', sans-serif;
     line-height: 1.6;
@@ -76,6 +80,7 @@ nav {
 .nav-links {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 .nav-links a {
@@ -85,6 +90,20 @@ nav {
 
 .nav-links a:hover {
     color: var(--safety-orange);
+}
+
+.btn-cta-nav {
+    background: var(--safety-orange);
+    color: var(--white) !important;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.btn-cta-nav:hover {
+    background: #ea580c; /* Slightly darker orange */
+    transform: translateY(-1px);
 }
 
 .btn-login {
