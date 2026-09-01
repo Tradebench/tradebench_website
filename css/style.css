@@ -749,6 +749,108 @@ nav {
     margin-bottom: 24px;
 }
 
+/* How It Works Section */
+.how-it-works {
+    background: var(--light-slate);
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+.step-card {
+    background: var(--white);
+    padding: 36px 28px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(249, 115, 22, 0.1);
+    border-color: rgba(249, 115, 22, 0.3);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}
+
+.step-icon-wrap {
+    width: 58px;
+    height: 58px;
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--safety-orange);
+    font-size: 1.45rem;
+    transition: 0.3s ease;
+}
+
+.step-card:hover .step-icon-wrap {
+    background: var(--safety-orange);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.step-number {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #CBD5E1;
+    line-height: 1;
+    letter-spacing: -1px;
+    transition: 0.3s;
+}
+
+.step-card:hover .step-number {
+    color: var(--safety-orange);
+}
+
+.step-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: var(--deep-navy);
+}
+
+.step-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+.step-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--safety-orange);
+    background: rgba(249, 115, 22, 0.08);
+    padding: 6px 12px;
+    border-radius: 999px;
+    width: fit-content;
+}
+
 /* Solutions Section */
 .solutions {
     background: var(--white);
@@ -1118,13 +1220,15 @@ footer {
     }
 
     .feature-grid,
-    .solutions-grid {
+    .solutions-grid,
+    .steps-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
 
     .feature-card,
-    .solution-card {
+    .solution-card,
+    .step-card {
         padding: 32px 24px;
     }
 
