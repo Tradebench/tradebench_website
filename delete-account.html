@@ -491,7 +491,7 @@
                     userPhone: phone,
                     message: reason ? `Reason: ${reason}` : 'User requested account and data deletion via web portal.',
                     source: 'web_account_deletion',
-                    status: 'open',
+                    status: 'pending',
                     priority: 'high',
                     createdAt: firebase.firestore.FieldValue.serverTimestamp()
                 });
