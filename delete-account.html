@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account & Data Deletion Request | Tradebench</title>
+    <meta name="description" content="Request the permanent deletion of your Tradebench account and associated personal data.">
+    <link rel="icon" type="image/svg+xml" href="assets/logo_dark.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="assets/logo_light.svg" alt="Tradebench Logo">
+                </a>
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false" aria-controls="navLinks">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html#features">Features</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="index.html#solutions">Solutions</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#download" class="btn-cta-nav">Join the Network</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>Privacy &amp; Data Protection</span>
+                </div>
+                <h1>Account &amp; Data Deletion</h1>
+                <p>At Tradebench, you have full control over your personal data. You can request the permanent deletion of your account and all associated profile records at any time.</p>
+            </div>
+        </section>
+
+        <section class="deletion-section">
+            <div class="container">
+                <div class="deletion-container">
+                    
+                    <!-- Option 1: In-App Deletion -->
+                    <div class="deletion-card">
+                        <div class="deletion-card-header">
+                            <div class="deletion-card-icon blue">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div>
+                                <h2>Option 1: In-App Instant Deletion</h2>
+                                <p style="margin: 0; font-size: 0.9rem; color: #64748B;">Fastest method if you have the Tradebench app installed</p>
+                            </div>
+                        </div>
+                        <p>If you have access to the Tradebench mobile application on your device, you can delete your account instantly without manual review:</p>
+                        <ol class="deletion-steps">
+                            <li>
+                                <span class="step-badge">1</span>
+                                <span>Open the <strong>Tradebench</strong> mobile application and sign in.</span>
+                            </li>
+                            <li>
+                                <span class="step-badge">2</span>
+                                <span>Navigate to the <strong>Account</strong> or <strong>Profile</strong> tab.</span>
+                            </li>
+                            <li>
+                                <span class="step-badge">3</span>
+                                <span>Select <strong>Account Management</strong> &gt; <strong>Data &amp; Privacy</strong>.</span>
+                            </li>
+                            <li>
+                                <span class="step-badge">4</span>
+                                <span>Tap <strong>Delete Account</strong> and enter your password or verification code to confirm.</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <!-- Option 2: Web Deletion Form -->
+                    <div class="deletion-card">
+                        <div class="deletion-card-header">
+                            <div class="deletion-card-icon">
+                                <i class="fa-solid fa-file-shield"></i>
+                            </div>
+                            <div>
+                                <h2>Option 2: Web Deletion Request Form</h2>
+                                <p style="margin: 0; font-size: 0.9rem; color: #64748B;">For users without app access or uninstalled applications</p>
+                            </div>
+                        </div>
+                        <p>If you have uninstalled the app, lost access to your device, or prefer web processing, submit a deletion request below. Our administration team will verify your cellphone number and complete the deletion within <strong>7 business days</strong>.</p>
+
+                        <form id="deletionForm" class="deletion-form">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input type="text" id="name" required placeholder="e.g. John Doe" autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Registered Cellphone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" required placeholder="e.g. +27 82 123 4567" autocomplete="tel">
+                                <span class="form-hint">Please include country code if possible. We use this to locate your record.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reason">Reason for Deletion <span style="font-weight: 400; color: #94A3B8;">(Optional)</span></label>
+                                <textarea id="reason" rows="3" placeholder="Let us know if you experienced any issues or why you are leaving..."></textarea>
+                            </div>
+
+                            <button type="submit" id="submitBtn" class="btn-deletion-submit">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Submit Deletion Request</span>
+                            </button>
+                            <div id="statusMsg" class="deletion-status-msg"></div>
+                        </form>
+                    </div>
+
+                    <!-- What Data is Permanently Deleted? -->
+                    <div class="deletion-card">
+                        <div class="deletion-card-header">
+                            <div class="deletion-card-icon red">
+                                <i class="fa-solid fa-trash-can"></i>
+                            </div>
+                            <div>
+                                <h3>What Data is Permanently Deleted?</h3>
+                                <p style="margin: 0; font-size: 0.9rem; color: #64748B;">Complete removal from our servers and database</p>
+                            </div>
+                        </div>
+                        <p>Upon processing an account deletion request, the following information is permanently purged:</p>
+                        <ul class="deletion-data-list">
+                            <li>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span><strong>Authentication &amp; Security Records:</strong> Login credentials, phone verification tokens, and session logs.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span><strong>Personal Profile Information:</strong> Full name, phone number, physical location, and contact details.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span><strong>Contractor &amp; Trade Records:</strong> Uploaded CV documents, portfolio photos, licences, certification files, and trade descriptions.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-xmark"></i>
+                                <span><strong>Platform History:</strong> Shortlists, profile unlock history, reference logs, and customer support communications.</span>
+                            </li>
+                        </ul>
+
+                        <div class="deletion-info-box">
+                            <p><strong>Note on Legal Requirements:</strong> Certain financial transaction logs may be retained for the minimum period legally required under South African tax and auditing laws before permanent erasure.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact & Assistance -->
+                    <div class="deletion-card" style="text-align: center;">
+                        <h3 style="margin-bottom: 8px;">Need Assistance?</h3>
+                        <p style="margin-bottom: 0;">If you have any questions regarding your data or privacy, contact our support team directly at <a href="mailto:hello@tradebench.co.za" style="color: var(--safety-orange); font-weight: 600;">hello@tradebench.co.za</a>.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <a href="index.html">
+                <img src="assets/logo_light.svg" alt="Tradebench Logo" class="footer-logo">
+            </a>
+            <div class="footer-links">
+                <a href="index.html#features">Features</a>
+                <a href="index.html#solutions">Solutions</a>
+                <a href="delete-account.html">Account Deletion</a>
+                <a href="mailto:hello@tradebench.co.za">Support</a>
+            </div>
+            <p class="footer-disclaimer">
+                Disclaimer: App screenshots, mockups, and user interface representations shown on this website are for illustrative purposes only and may differ from the final product. Features, UI elements, and specifications are subject to development changes without prior notice.
+            </p>
+            <p class="copyright">&copy; 2026 Tradebench. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Nav & Interactivity -->
+    <script src="js/main.js"></script>
+
+    <!-- Firebase Configuration and Form Submission -->
+    <script>
+        // Tradebench Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAXt0Ct4dW5OkyGXD7Ppw42r6CuK_Lq2co",
+            authDomain: "tradebench-8f229.firebaseapp.com",
+            projectId: "tradebench-8f229",
+            storageBucket: "tradebench-8f229.firebasestorage.app",
+            messagingSenderId: "783972395236",
+            appId: "1:783972395236:web:tradebench"
+        };
+
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        const db = firebase.firestore();
+
+        const form = document.getElementById('deletionForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMsg = document.getElementById('statusMsg');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Submitting request...</span>';
+            statusMsg.style.display = 'none';
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const reason = document.getElementById('reason').value.trim();
+
+            try {
+                // Direct write to Firestore support_tickets collection
+                await db.collection('support_tickets').add({
+                    subject: 'Account Deletion Request',
+                    userName: name,
+                    userPhone: phone,
+                    message: reason ? `Reason: ${reason}` : 'User requested account and data deletion via web portal.',
+                    source: 'web_account_deletion',
+                    status: 'open',
+                    priority: 'high',
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+
+                statusMsg.className = 'deletion-status-msg success';
+                statusMsg.innerHTML = '<i class="fa-solid fa-circle-check" style="color:#10B981; margin-right:6px;"></i> <strong>Request Received!</strong> Your account deletion request has been submitted to our administration team. We will verify your cellphone number and complete the deletion within 7 business days.';
+                statusMsg.style.display = 'block';
+                form.reset();
+            } catch (err) {
+                console.error(err);
+                statusMsg.className = 'deletion-status-msg error';
+                statusMsg.innerHTML = '<i class="fa-solid fa-triangle-exclamation" style="color:#EF4444; margin-right:6px;"></i> <strong>Submission Issue:</strong> Unable to submit automatically. Please send an email directly to <a href="mailto:hello@tradebench.co.za?subject=Account%20Deletion%20Request%20-%20' + encodeURIComponent(phone) + '">hello@tradebench.co.za</a> with your registered phone number.';
+                statusMsg.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> <span>Submit Deletion Request</span>';
+            }
+        });
+    </script>
+</body>
+
+</html>
