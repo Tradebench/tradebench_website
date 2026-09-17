@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Tradebench</title>
+    <meta name="description" content="Read the official Tradebench Privacy Policy. Learn how we collect, process, and protect your personal information in strict compliance with South Africa's POPIA (Act 4 of 2013).">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://tradebench.co.za/privacy">
+
+    <!-- Open Graph / Social Meta Tags -->
+    <meta property="og:title" content="Privacy Policy | Tradebench">
+    <meta property="og:description" content="Transparent, lawful, and secure data processing for verified tradesmen and hirers under POPIA (Act 4 of 2013).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tradebench.co.za/privacy">
+    <meta property="og:image" content="../assets/logo_light.svg">
+
+    <link rel="icon" type="image/svg+xml" href="../assets/logo_dark.svg">
+    <link rel="stylesheet" href="../css/style.css?v=2.1">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Markdown Parser & HTML Sanitizer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.2/purify.min.js"></script>
+</head>
+
+<body>
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../assets/logo_light.svg" alt="Tradebench Logo">
+                </a>
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu"
+                    aria-expanded="false" aria-controls="navLinks">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="../index.html#features">Features</a>
+                    <a href="../index.html#how-it-works">How It Works</a>
+                    <a href="../index.html#solutions">Solutions</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#download" class="btn-cta-nav">Join the Network</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Metadata -->
+        <section class="legal-hero">
+            <div class="container">
+                <div class="hero-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>Legal &amp; Regulatory Compliance • POPIA Act 4 of 2013</span>
+                </div>
+                <h1 id="heroTitle">Privacy Policy</h1>
+                <p class="hero-subtitle">
+                    Our commitment to transparent, lawful, and secure data processing for verified tradesmen and hirers across South Africa.
+                </p>
+
+                <!-- Dynamic Metadata Badges -->
+                <div class="legal-meta-strip" id="metaStrip">
+                    <div class="legal-meta-badge" id="badgeVersion">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Version: <strong>1.0</strong></span>
+                    </div>
+                    <div class="legal-meta-badge" id="badgeEffective">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Effective: <strong>1 October 2026</strong></span>
+                    </div>
+                    <div class="legal-meta-badge" id="badgeGoverning">
+                        <i class="fas fa-scale-balanced"></i>
+                        <span>Governing Law: <strong>South Africa (POPIA)</strong></span>
+                    </div>
+                    <div class="legal-meta-badge highlight">
+                        <i class="fas fa-circle-check"></i>
+                        <span>Status: <strong>Active &amp; Enforced</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticky Quick Actions Bar -->
+        <div class="legal-actions-wrapper">
+            <div class="container">
+                <div class="legal-actions-bar">
+                    <div class="legal-actions-left">
+                        <i class="fas fa-lock"></i>
+                        <span>Protected by Split-Document Architecture &amp; End-to-End Encryption</span>
+                    </div>
+                    <div class="legal-actions-right">
+                        <button type="button" class="btn-legal-action" onclick="window.print()" title="Print or save as PDF">
+                            <i class="fas fa-print"></i>
+                            <span>Print Policy</span>
+                        </button>
+                        <a href="mailto:privacy@tradebench.co.za?subject=POPIA%20Privacy%20Inquiry" class="btn-legal-action primary" title="Contact the Information Officer">
+                            <i class="fas fa-envelope"></i>
+                            <span>Contact Privacy Officer</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content & Navigation Section -->
+        <section class="legal-section">
+            <div class="container">
+                <div class="legal-grid">
+                    <!-- Left Sticky Sidebar (Table of Contents) -->
+                    <aside class="legal-sidebar" id="sidebarContainer">
+                        <div class="legal-sidebar-header">
+                            <i class="fas fa-list-ul"></i>
+                            <h3>Table of Contents</h3>
+                        </div>
+                        <nav aria-label="Privacy Policy Sections">
+                            <ul class="legal-toc-list" id="tocList">
+                                <li class="legal-toc-item"><a href="#loading" class="active">Loading index...</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+
+                    <!-- Right Main Legal Document Card -->
+                    <article class="legal-content-card">
+                        <!-- Shimmer Skeleton Loading State -->
+                        <div class="skeleton-container" id="loadingSkeleton">
+                            <div class="skeleton-pulse skeleton-title"></div>
+                            <div class="skeleton-pulse skeleton-meta" style="margin-bottom: 24px;"></div>
+                            <div class="skeleton-pulse skeleton-text"></div>
+                            <div class="skeleton-pulse skeleton-text"></div>
+                            <div class="skeleton-pulse skeleton-text short"></div>
+                            <div class="skeleton-pulse skeleton-box" style="margin: 20px 0;"></div>
+                            <div class="skeleton-pulse skeleton-text"></div>
+                            <div class="skeleton-pulse skeleton-text"></div>
+                            <div class="skeleton-pulse skeleton-text short"></div>
+                            <div class="skeleton-pulse skeleton-box" style="margin: 20px 0;"></div>
+                            <div class="skeleton-pulse skeleton-text"></div>
+                            <div class="skeleton-pulse skeleton-text"></div>
+                        </div>
+
+                        <!-- Error State Placeholder -->
+                        <div class="legal-error-box" id="errorState" style="display: none;">
+                            <div class="legal-error-icon">
+                                <i class="fas fa-triangle-exclamation"></i>
+                            </div>
+                            <h3>Unable to Load Live Policy</h3>
+                            <p>We encountered a temporary network issue while fetching the latest policy document from our backend. Please try again or reach out to our privacy desk.</p>
+                            <button type="button" class="btn-retry" id="retryBtn">
+                                <i class="fas fa-rotate-right"></i>
+                                <span>Retry Connection</span>
+                            </button>
+                            <div style="margin-top: 24px;">
+                                <a href="mailto:privacy@tradebench.co.za" style="color: var(--safety-orange); font-size: 0.92rem; font-weight: 600;">
+                                    <i class="fas fa-envelope"></i> privacy@tradebench.co.za
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Rendered Markdown Content Container -->
+                        <div class="legal-article" id="policyContent" style="display: none;"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="../index.html">
+                <img src="../assets/logo_light.svg" alt="Tradebench Logo" class="footer-logo">
+            </a>
+            <div class="footer-links">
+                <a href="../index.html#features">Features</a>
+                <a href="../index.html#solutions">Solutions</a>
+                <a href="../privacy.html" style="color: var(--white); font-weight: 600;">Privacy Policy</a>
+                <a href="../delete-account.html">Account Deletion</a>
+                <a href="mailto:hello@tradebench.co.za">Support</a>
+            </div>
+            <p class="footer-disclaimer">
+                Disclaimer: App screenshots, mockups, and user interface representations shown on this website are for illustrative purposes only and may differ from the final product. Features, UI elements, and specifications are subject to development changes without prior notice.
+            </p>
+            <p class="copyright">&copy; 2026 Tradebench (Pty) Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Nav JS -->
+    <script src="../js/main.js"></script>
+
+    <!-- Dynamic Policy Fetching & Processing -->
+    <script>
+        (function () {
+            const FIRESTORE_ENDPOINT = "https://firestore.googleapis.com/v1/projects/tradebench-8f229/databases/(default)/documents/legal/privacy_policy";
+
+            const loadingSkeleton = document.getElementById("loadingSkeleton");
+            const errorState = document.getElementById("errorState");
+            const policyContent = document.getElementById("policyContent");
+            const retryBtn = document.getElementById("retryBtn");
+            const tocList = document.getElementById("tocList");
+            const heroTitle = document.getElementById("heroTitle");
+            const badgeVersion = document.getElementById("badgeVersion");
+            const badgeEffective = document.getElementById("badgeEffective");
+            const badgeGoverning = document.getElementById("badgeGoverning");
+
+            // Slugify helper for section anchors
+            function slugify(text) {
+                return text
+                    .toString()
+                    .toLowerCase()
+                    .trim()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^\w\-]+/g, '')
+                    .replace(/\-\-+/g, '-');
+            }
+
+            // Post-process rendered HTML to enhance callouts and special boxes
+            function enhanceRenderedHtml(container) {
+                // 1. Process blockquotes into rich callout cards
+                const blockquotes = container.querySelectorAll("blockquote");
+                blockquotes.forEach(bq => {
+                    const text = bq.textContent;
+                    if (text.includes("NO EMAIL ADDRESSES COLLECTED")) {
+                        bq.classList.add("callout-no-email");
+                        const icon = document.createElement("i");
+                        icon.className = "fas fa-envelope-circle-check";
+                        icon.style.fontSize = "1.5rem";
+                        icon.style.color = "#ea580c";
+                        icon.style.marginBottom = "10px";
+                        icon.style.display = "block";
+                        bq.prepend(icon);
+                    } else if (text.includes("STRICTLY RESTRICTED ACCESS") || text.includes("Gated Private Data")) {
+                        bq.classList.add("callout-security");
+                    }
+                });
+
+                // 2. Add IDs and generate TOC entries from H2 elements
+                const headings = container.querySelectorAll("h2");
+                tocList.innerHTML = "";
+
+                headings.forEach((h2, index) => {
+                    const rawTitle = h2.textContent.trim();
+                    const cleanTitle = rawTitle.replace(/^\d+\.\s*/, "");
+                    const slug = "section-" + (index + 1) + "-" + slugify(cleanTitle);
+
+                    h2.id = slug;
+
+                    const li = document.createElement("li");
+                    li.className = "legal-toc-item";
+                    
+                    const a = document.createElement("a");
+                    a.href = "#" + slug;
+                    a.textContent = rawTitle;
+                    
+                    a.addEventListener("click", function(e) {
+                        e.preventDefault();
+                        const target = document.getElementById(slug);
+                        if (target) {
+                            target.scrollIntoView({ behavior: "smooth", block: "start" });
+                            history.pushState(null, "", "#" + slug);
+                        }
+                    });
+
+                    li.appendChild(a);
+                    tocList.appendChild(li);
+                });
+
+                // 3. Ensure external links open securely
+                const links = container.querySelectorAll("a");
+                links.forEach(link => {
+                    if (link.hostname && link.hostname !== window.location.hostname) {
+                        link.target = "_blank";
+                        link.rel = "noopener noreferrer";
+                    }
+                });
+
+                // 4. Setup Intersection Observer for TOC active highlighting
+                setupScrollSpy(headings);
+            }
+
+            function setupScrollSpy(headings) {
+                if (!("IntersectionObserver" in window) || headings.length === 0) return;
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.id;
+                            const activeLink = document.querySelector(`.legal-toc-item a[href="#${id}"]`);
+                            if (activeLink) {
+                                document.querySelectorAll(".legal-toc-item a").forEach(link => link.classList.remove("active"));
+                                activeLink.classList.add("active");
+                            }
+                        }
+                    });
+                }, {
+                    rootMargin: "-100px 0px -60% 0px",
+                    threshold: 0
+                });
+
+                headings.forEach(heading => observer.observe(heading));
+            }
+
+            async function fetchPrivacyPolicy() {
+                loadingSkeleton.style.display = "flex";
+                errorState.style.display = "none";
+                policyContent.style.display = "none";
+
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 9000);
+
+                try {
+                    const response = await fetch(FIRESTORE_ENDPOINT, {
+                        signal: controller.signal,
+                        headers: {
+                            "Accept": "application/json"
+                        }
+                    });
+
+                    clearTimeout(timeoutId);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP Error: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    const fields = data.fields || {};
+
+                    const title = fields.title?.stringValue || "Tradebench (Pty) Ltd — Privacy Policy";
+                    const version = fields.version?.stringValue || "1.0";
+                    const effectiveDate = fields.effectiveDate?.stringValue || "1 October 2026";
+                    const governingLaw = fields.governingLaw?.stringValue || "Republic of South Africa (POPIA - Act 4 of 2013)";
+                    const markdownContent = fields.content?.stringValue || "";
+
+                    if (!markdownContent) {
+                        throw new Error("Empty markdown content in Firestore document");
+                    }
+
+                    if (heroTitle) heroTitle.textContent = title;
+                    if (badgeVersion) badgeVersion.innerHTML = `<i class="fas fa-code-branch"></i> <span>Version: <strong>${version}</strong></span>`;
+                    if (badgeEffective) badgeEffective.innerHTML = `<i class="fas fa-calendar-check"></i> <span>Effective: <strong>${effectiveDate}</strong></span>`;
+                    if (badgeGoverning) badgeGoverning.innerHTML = `<i class="fas fa-scale-balanced"></i> <span>Governing: <strong>${governingLaw}</strong></span>`;
+
+                    let rawHtml = "";
+                    if (typeof marked !== "undefined" && marked.parse) {
+                        rawHtml = marked.parse(markdownContent);
+                    } else {
+                        rawHtml = markdownContent.replace(/\n/g, "<br>");
+                    }
+
+                    let cleanHtml = rawHtml;
+                    if (typeof DOMPurify !== "undefined" && DOMPurify.sanitize) {
+                        cleanHtml = DOMPurify.sanitize(rawHtml, {
+                            ADD_ATTR: ['target', 'rel']
+                        });
+                    }
+
+                    policyContent.innerHTML = cleanHtml;
+                    enhanceRenderedHtml(policyContent);
+
+                    loadingSkeleton.style.display = "none";
+                    policyContent.style.display = "block";
+
+                    if (window.location.hash) {
+                        setTimeout(() => {
+                            const target = document.querySelector(window.location.hash);
+                            if (target) {
+                                target.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }
+                        }, 250);
+                    }
+
+                } catch (err) {
+                    console.error("Failed to load Privacy Policy from Firestore:", err);
+                    loadingSkeleton.style.display = "none";
+                    errorState.style.display = "block";
+                }
+            }
+
+            if (retryBtn) {
+                retryBtn.addEventListener("click", fetchPrivacyPolicy);
+            }
+
+            document.addEventListener("DOMContentLoaded", fetchPrivacyPolicy);
+        })();
+    </script>
+</body>
+
+</html>
