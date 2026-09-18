@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=privacy.html">
+    <meta http-equiv="refresh" content="0; url=legal.html?tab=privacy">
     <title>Redirecting to Privacy Policy | Tradebench</title>
-    <link rel="canonical" href="https://tradebench.co.za/privacy">
+    <link rel="canonical" href="https://tradebench.co.za/legal?tab=privacy">
     <script>
-        window.location.replace("privacy.html");
+        const hash = window.location.hash || "";
+        window.location.replace("legal.html?tab=privacy" + hash);
     </script>
 </head>
 <body>
-    <p>Redirecting to the <a href="privacy.html">Tradebench Privacy Policy</a>...</p>
+    <p>Redirecting to the <a href="legal.html?tab=privacy">Tradebench Privacy Policy</a>...</p>
 </body>
 </html>
