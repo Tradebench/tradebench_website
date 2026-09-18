@@ -1529,17 +1529,34 @@ footer {
 .btn-legal-action {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 7px 14px;
+    height: 38px;
+    box-sizing: border-box;
+    padding: 0 16px;
     border-radius: 8px;
+    font-family: inherit;
     font-size: 0.85rem;
     font-weight: 600;
+    line-height: 1;
     background: #F8FAFC;
     color: #334155;
     border: 1px solid #CBD5E1;
     cursor: pointer;
     transition: all 0.2s ease;
     text-decoration: none;
+    appearance: none;
+    -webkit-appearance: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.btn-legal-action i {
+    font-size: 0.95rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 .btn-legal-action:hover {
