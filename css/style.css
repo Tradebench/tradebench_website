@@ -1039,24 +1039,76 @@ footer {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.app-badge-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.16) 0%, rgba(30, 41, 59, 0.85) 100%);
+    border: 1.5px solid var(--safety-orange);
+    padding: 12px 24px;
+    border-radius: 12px;
+    color: var(--white);
+    font-size: 0.9rem;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(249, 115, 22, 0.2);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+}
+
+.app-badge-btn:hover {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.28) 0%, rgba(30, 41, 59, 0.95) 100%);
+    border-color: #fb923c;
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(249, 115, 22, 0.35);
+}
+
+.app-badge-btn i {
+    font-size: 26px;
+    color: var(--safety-orange);
+    transition: transform 0.3s ease;
+}
+
+.app-badge-btn:hover i {
+    transform: scale(1.1);
+}
+
+.app-badge-btn span {
+    display: block;
+    font-size: 0.7rem;
+    color: #CBD5E1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.app-badge-btn strong {
+    display: block;
+    font-size: 1.05rem;
+    color: var(--white);
+    line-height: 1.25;
 }
 
 .badge-placeholder {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.05);
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 12px 24px;
     border-radius: 12px;
     color: var(--white);
     font-size: 0.9rem;
     transition: 0.3s;
+    user-select: none;
 }
 
 .badge-placeholder i {
-    font-size: 24px;
-    color: var(--safety-orange);
+    font-size: 26px;
+    color: #94A3B8;
 }
 
 .badge-placeholder span {
@@ -1065,6 +1117,14 @@ footer {
     color: #94A3B8;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.badge-placeholder strong {
+    display: block;
+    font-size: 1.05rem;
+    color: #E2E8F0;
+    line-height: 1.25;
 }
 
 .phone-mockup {
@@ -2394,6 +2454,7 @@ footer {
         align-items: center;
     }
 
+    .app-badge-btn,
     .badge-placeholder {
         width: 100%;
         max-width: 260px;
