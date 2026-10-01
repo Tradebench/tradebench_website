@@ -1031,6 +1031,28 @@ footer {
     font-size: 0.9rem;
 }
 
+.admin-link {
+    color: #475569;
+    font-size: 0.82rem;
+    opacity: 0.35;
+    text-decoration: none;
+    transition: opacity 0.2s ease, color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.admin-link:hover {
+    opacity: 0.95;
+    color: #94A3B8;
+}
+
+.footer-divider {
+    color: #334155;
+    margin: 0 8px;
+    user-select: none;
+}
+
 .footer-disclaimer {
     max-width: 780px;
     margin: 20px auto 16px;
