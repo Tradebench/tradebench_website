@@ -699,8 +699,8 @@ nav {
     position: absolute;
     z-index: 2;
     background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     color: var(--white);
     padding: 8px 14px;
@@ -998,6 +998,21 @@ nav {
     flex-shrink: 0;
 }
 
+/* About Section */
+.about {
+    background: var(--light-slate);
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
 /* Footer */
 footer {
     background: var(--deep-navy);
@@ -1050,6 +1065,7 @@ footer {
 .footer-divider {
     color: #334155;
     margin: 0 8px;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -1177,7 +1193,29 @@ footer {
     color: var(--white);
     font-size: 0.9rem;
     transition: 0.3s;
+    -webkit-user-select: none;
     user-select: none;
+}
+
+.app-badge-btn small,
+.badge-placeholder small {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 600;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.badge-status-now {
+    color: #4ADE80;
+}
+
+.badge-status-browser {
+    color: var(--action-sky);
+}
+
+.badge-status-soon {
+    color: var(--safety-orange);
 }
 
 .badge-placeholder i {
@@ -1549,8 +1587,8 @@ footer {
     gap: 8px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.16);
-    backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     padding: 8px 16px;
     border-radius: 999px;
     font-size: 0.88rem;
@@ -1586,8 +1624,8 @@ footer {
     border-radius: 999px;
     padding: 6px;
     gap: 6px;
-    backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     max-width: 100%;
 }
@@ -1679,8 +1717,8 @@ footer {
     cursor: pointer;
     transition: all 0.2s ease;
     text-decoration: none;
-    appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     vertical-align: middle;
     white-space: nowrap;
     margin: 0;
@@ -1972,7 +2010,6 @@ footer {
     border: 1px solid #E2E8F0;
     box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
     background: var(--white);
-    -webkit-overflow-scrolling: touch;
 }
 
 .legal-article table {
@@ -2196,6 +2233,7 @@ footer {
 .skeleton-meta {
     height: 24px;
     width: 40%;
+    margin-bottom: 24px;
 }
 
 .skeleton-text {
@@ -2211,6 +2249,11 @@ footer {
     height: 120px;
     width: 100%;
     border-radius: 14px;
+    margin: 20px 0;
+}
+
+#documentContent {
+    display: none;
 }
 
 /* Error State */
@@ -2349,8 +2392,8 @@ footer {
         left: 0;
         right: 0;
         background: rgba(15, 23, 42, 0.98);
-        backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
         flex-direction: column;

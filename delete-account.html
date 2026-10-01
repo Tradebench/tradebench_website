@@ -90,6 +90,28 @@
             color: #0F172A;
             margin: 0;
         }
+        .deletion-card-header p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #64748B;
+        }
+        .label-optional {
+            font-weight: 400;
+            color: #94A3B8;
+        }
+        .deletion-card.center-content {
+            text-align: center;
+        }
+        .deletion-card.center-content h3 {
+            margin-bottom: 8px;
+        }
+        .deletion-card.center-content p {
+            margin-bottom: 0;
+        }
+        .deletion-support-email {
+            color: #F97316;
+            font-weight: 600;
+        }
         .deletion-card p {
             color: #475569;
             font-size: 1rem;
@@ -325,7 +347,7 @@
                             </div>
                             <div>
                                 <h2>Option 1: In-App Instant Deletion</h2>
-                                <p style="margin: 0; font-size: 0.9rem; color: #64748B;">Fastest method if you have the Tradebench app installed</p>
+                                <p>Fastest method if you have the Tradebench app installed</p>
                             </div>
                         </div>
                         <p>If you have access to the Tradebench mobile application on your device, you can delete your account instantly without manual review:</p>
@@ -357,7 +379,7 @@
                             </div>
                             <div>
                                 <h2>Option 2: Web Deletion Request Form</h2>
-                                <p style="margin: 0; font-size: 0.9rem; color: #64748B;">For users without app access or uninstalled applications</p>
+                                <p>For users without app access or uninstalled applications</p>
                             </div>
                         </div>
                         <p>If you have uninstalled the app, lost access to your device, or prefer web processing, submit a deletion request below. Our administration team will verify your cellphone number and complete the deletion within <strong>7 business days</strong>.</p>
@@ -375,7 +397,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="reason">Reason for Deletion <span style="font-weight: 400; color: #94A3B8;">(Optional)</span></label>
+                                <label for="reason">Reason for Deletion <span class="label-optional">(Optional)</span></label>
                                 <textarea id="reason" rows="3" placeholder="Let us know if you experienced any issues or why you are leaving..."></textarea>
                             </div>
 
@@ -395,7 +417,7 @@
                             </div>
                             <div>
                                 <h3>What Data is Permanently Deleted?</h3>
-                                <p style="margin: 0; font-size: 0.9rem; color: #64748B;">Complete removal from our servers and database</p>
+                                <p>Complete removal from our servers and database</p>
                             </div>
                         </div>
                         <p>Upon processing an account deletion request, the following information is permanently purged:</p>
@@ -424,9 +446,9 @@
                     </div>
 
                     <!-- Contact & Assistance -->
-                    <div class="deletion-card" style="text-align: center;">
-                        <h3 style="margin-bottom: 8px;">Need Assistance?</h3>
-                        <p style="margin-bottom: 0;">If you have any questions regarding your data or privacy, contact our support team directly at <a href="mailto:hello@tradebench.co.za" style="color: #F97316; font-weight: 600;">hello@tradebench.co.za</a>.</p>
+                    <div class="deletion-card center-content">
+                        <h3>Need Assistance?</h3>
+                        <p>If you have any questions regarding your data or privacy, contact our support team directly at <a href="mailto:hello@tradebench.co.za" class="deletion-support-email">hello@tradebench.co.za</a>.</p>
                     </div>
 
                 </div>
