@@ -130,15 +130,27 @@ nav {
 }
 
 .btn-login {
-    border: 2px solid var(--safety-orange);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1.5px solid var(--safety-orange);
     color: var(--safety-orange) !important;
-    padding: 8px 24px;
+    padding: 8px 18px;
     border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
 }
 
 .btn-login:hover {
     background: var(--safety-orange);
     color: var(--white) !important;
+    transform: translateY(-1px);
+}
+
+.btn-cta-nav + .btn-login {
+    margin-left: -18px;
 }
 
 /* Hero Section */
@@ -199,7 +211,31 @@ nav {
     align-items: center;
     gap: 16px;
     flex-wrap: wrap;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-web-app-hint {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--action-sky);
+    margin-bottom: 34px;
+}
+
+.hero-web-app-hint a {
+    color: var(--white);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
+}
+
+.hero-web-app-hint a:hover {
+    color: var(--safety-orange);
 }
 
 .cta-button {
@@ -1090,6 +1126,22 @@ footer {
     font-size: 1.05rem;
     color: var(--white);
     line-height: 1.25;
+}
+
+.app-badge-btn.web-app-btn {
+    background: linear-gradient(135deg, rgba(125, 211, 252, 0.12) 0%, rgba(30, 41, 59, 0.85) 100%);
+    border-color: rgba(125, 211, 252, 0.6);
+    box-shadow: 0 4px 18px rgba(125, 211, 252, 0.12);
+}
+
+.app-badge-btn.web-app-btn:hover {
+    background: linear-gradient(135deg, rgba(125, 211, 252, 0.22) 0%, rgba(30, 41, 59, 0.95) 100%);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 28px rgba(125, 211, 252, 0.25);
+}
+
+.app-badge-btn.web-app-btn i {
+    color: var(--action-sky);
 }
 
 .badge-placeholder {
@@ -2313,6 +2365,27 @@ footer {
         max-width: 280px;
         padding: 12px 24px;
         text-align: center;
+    }
+
+    .btn-login {
+        margin-left: 0;
+        margin-top: 4px;
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 24px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .btn-cta-nav + .btn-login {
+        margin-left: 0;
+    }
+
+    .hero-web-app-hint {
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: 28px;
     }
 
     /* Hero */
